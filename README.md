@@ -1,4 +1,4 @@
-# 📌 MDSS2
+# MDSS2
 
 Este proyecto implementa un sistema de gestión de lotes de materia prima y producción para una cooperativa de productores de olivo. Se ha desarrollado en **Python**, aplicando patrones de diseño para garantizar una arquitectura modular, flexible y escalable.
 
@@ -13,7 +13,7 @@ Este proyecto implementa un sistema de gestión de lotes de materia prima y prod
 - production.py | Define la clase LoteProduccion y su relación con lotes y productos
 - quality.py | Implementa el patrón Strategy para evaluación de calidad
 - rawbatch.py | Define la clase LoteMateriaPrima y su gestión de estados
-- state.py |Implementa el patrón State + Template Method para los estados del lote
+- state.py | Implementa el patrón State + Template Method para los estados del lote
 
 
 ## 🎯 Patrones de Diseño Aplicados
@@ -22,11 +22,6 @@ Este proyecto implementa un sistema de gestión de lotes de materia prima y prod
 - La clase `LoteMateriaPrima` implementa el metodo `accept()`, permitiendo que visitantes externos procesen su información.
 - `AnalizadorVisitor` es una interfaz que define la estructura de los analizadores de imágenes.
 - `AnalizadorMadurezVisitor` y `AnalizadorDefectosVisitor` implementan la lógica de análisis, devolviendo los resultados según el tipo de producto (aceite u oliva de mesa).
-
-### 🔄 State + Template Method (Gestión de Estados)
-- `EstadoLote` es una clase abstracta que define un **metodo plantilla** `registrar_transicion()`, asegurando que todas las transiciones sean registradas de forma uniforme.
-- `Ingresado`, `EnAnalisis`, `Analizado` y `EnProduccion` extienden `EstadoLote`, definiendo el comportamiento específico de cada estado.
-- `LoteMateriaPrima` mantiene una referencia a su estado actual y delega sus acciones al objeto `estado`, permitiendo transiciones dinámicas.
 
 ### 📤 Strategy (Exportación de Reportes)
 - `ExportStrategy` define una interfaz para los distintos metodos de exportación.
@@ -38,7 +33,12 @@ Este proyecto implementa un sistema de gestión de lotes de materia prima y prod
 - Las clases `CalidadAceiteVirgenExtra`, `CalidadAceiteVirgen` y `CalidadAceiteDeOrujo` evalúan la calidad del aceite en función de sus atributos.
 - `ProductoFinal` asigna su calidad utilizando una de estas estrategias.
 
-## ✅ Beneficios de la Implementación
+### 🔄 State + Template Method (Gestión de Estados)
+- `EstadoLote` es una clase abstracta que define un **método plantilla** `registrar_transicion()`, asegurando que todas las transiciones sean registradas de forma uniforme.
+- `Ingresado`, `EnAnalisis`, `Analizado` y `EnProduccion` extienden `EstadoLote`, definiendo el comportamiento específico de cada estado.
+- `LoteMateriaPrima` mantiene una referencia a su estado actual y delega sus acciones al objeto `estado`, permitiendo transiciones dinámicas.
+
+## ✅ Ventajas de la Implementación
 
 - 🏗 **Código modular:** Cada componente tiene una única responsabilidad, lo que facilita el mantenimiento.
 - 📈 **Escalabilidad:** Se pueden agregar nuevos estados, estrategias o analizadores sin afectar el código existente.
