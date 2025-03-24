@@ -2,18 +2,19 @@
 
 Este proyecto implementa un sistema de gestión de lotes de materia prima y producción para una cooperativa de productores de olivo. Se ha desarrollado en **Python**, aplicando patrones de diseño para garantizar una arquitectura modular, flexible y escalable.
 
-## 📂 Estructura del Proyecto
+## 🏗️ Estructura del Proyecto
 
 📁 src
-│── producer.py       # Define la clase Productor
-│── state.py          # Implementa el patrón State + Template Method para los estados del lote
-│── rawbatch.py       # Define la clase LoteMateriaPrima y su gestión de estados
-│── analyzer.py       # Implementa el patrón Visitor para analizar los lotes
-│── exporter.py       # Define el patrón Strategy para exportación de reportes
-│── quality.py        # Implementa el patrón Strategy para evaluación de calidad
-│── production.py     # Define la clase LoteProduccion y su relación con lotes y productos
-│── product.py        # Define la clase ProductoFinal
-│── main.py           # Script principal de ejecucion
+├── analyzer.py       # Implementa el patrón Visitor para analizar los lotes
+├── exporter.py       # Define el patrón Strategy para exportación de reportes
+├── main.py           # Script principal de ejecución
+├── producer.py       # Define la clase Productor
+├── product.py        # Define la clase ProductoFinal
+├── production.py     # Define la clase LoteProduccion y su relación con lotes y productos
+├── quality.py        # Implementa el patrón Strategy para evaluación de calidad
+├── rawbatch.py       # Define la clase LoteMateriaPrima y su gestión de estados
+├── state.py          # Implementa el patrón State + Template Method para los estados del lote
+
 
 ## 🎯 Patrones de Diseño Aplicados
 
