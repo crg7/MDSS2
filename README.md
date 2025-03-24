@@ -7,7 +7,7 @@ Este proyecto implementa un sistema de gestión de lotes de materia prima y prod
 📁 src
 - analyzer.py    # Implementa el patrón Visitor para analizar los lotes
 - exporter.py    # Define el patrón Strategy para exportación de reportes
-- main.py    # Script principal de ejecución
+- main.py                    # Script principal de ejecución
 - producer.py    # Define la clase Productor
 - product.py    # Define la clase ProductoFinal
 - production.py    # Define la clase LoteProduccion y su relación con lotes y productos
