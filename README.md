@@ -1,11 +1,9 @@
-```md
 # 📌 MDSS2
 
 Este proyecto implementa un sistema de gestión de lotes de materia prima y producción para una cooperativa de productores de olivo. Se ha desarrollado en **Python**, aplicando patrones de diseño para garantizar una arquitectura modular, flexible y escalable.
 
 ## 📂 Estructura del Proyecto
 
-```
 📁 src
 │── producer.py       # Define la clase Productor
 │── state.py          # Implementa el patrón State + Template Method para los estados del lote
@@ -16,7 +14,6 @@ Este proyecto implementa un sistema de gestión de lotes de materia prima y prod
 │── production.py     # Define la clase LoteProduccion y su relación con lotes y productos
 │── product.py        # Define la clase ProductoFinal
 │── main.py           # Script principal de ejecucion
-```
 
 ## 🎯 Patrones de Diseño Aplicados
 
@@ -46,4 +43,3 @@ Este proyecto implementa un sistema de gestión de lotes de materia prima y prod
 - 📈 **Escalabilidad:** Se pueden agregar nuevos estados, estrategias o analizadores sin afectar el código existente.
 - 🔌 **Extensibilidad:** El sistema permite incluir nuevas estrategias de exportación, tipos de productos o evaluaciones de calidad sin modificar la lógica central.
 - 🛠 **Separación de responsabilidades:** El uso de patrones de diseño permite que cada módulo sea independiente y reutilizable.
-```
