@@ -5,15 +5,15 @@ Este proyecto implementa un sistema de gestión de lotes de materia prima y prod
 ## 🏗️ Estructura del Proyecto
 
 📁 src
-├── analyzer.py       # Implementa el patrón Visitor para analizar los lotes
-├── exporter.py       # Define el patrón Strategy para exportación de reportes
-├── main.py           # Script principal de ejecución
-├── producer.py       # Define la clase Productor
-├── product.py        # Define la clase ProductoFinal
-├── production.py     # Define la clase LoteProduccion y su relación con lotes y productos
-├── quality.py        # Implementa el patrón Strategy para evaluación de calidad
-├── rawbatch.py       # Define la clase LoteMateriaPrima y su gestión de estados
-├── state.py          # Implementa el patrón State + Template Method para los estados del lote
+|__analyzer.py       # Implementa el patrón Visitor para analizar los lotes
+|__exporter.py       # Define el patrón Strategy para exportación de reportes
+|__main.py           # Script principal de ejecución
+|__producer.py       # Define la clase Productor
+|__product.py        # Define la clase ProductoFinal
+|__production.py     # Define la clase LoteProduccion y su relación con lotes y productos
+|__quality.py        # Implementa el patrón Strategy para evaluación de calidad
+|__rawbatch.py       # Define la clase LoteMateriaPrima y su gestión de estados
+|__state.py          # Implementa el patrón State + Template Method para los estados del lote
 
 
 ## 🎯 Patrones de Diseño Aplicados
