@@ -21,7 +21,7 @@ Este proyecto implementa un sistema de gestión de lotes de materia prima y prod
 ### 🕵🏼‍♂️ Visitor (Analizadores de Imágenes)
 - La clase `LoteMateriaPrima` implementa el metodo `accept()`, permitiendo que visitantes externos procesen su información.
 - `AnalizadorVisitor` es una interfaz que define la estructura de los analizadores de imágenes.
-- `AnalizadorMadurezVisitor` y `AnalizadorDefectosVisitor` implementan la lógica de análisis, devolviendo los resultados según el tipo de producto (aceite u oliva de mesa).
+- Se implementan los visitantes: `AnalizadorMadurezVisitor`, `AnalizadorDefectosVisitor`, `AnalizadorHumedadVisitor`, `AnalizadorColorVisitor`, `AnalizadorTamanoVisitor` y `AnalizadorVariedadVisitor` para cubrir todas las características requeridas.
 
 ### 📤 Strategy (Exportación de Reportes)
 - `ExportStrategy` define una interfaz para los distintos metodos de exportación.
@@ -30,8 +30,8 @@ Este proyecto implementa un sistema de gestión de lotes de materia prima y prod
 
 ### 💎 Strategy (Evaluación de Calidad)
 - `CalidadStrategy` define la interfaz para la evaluación de calidad de los productos finales.
-- Las clases `CalidadAceiteVirgenExtra`, `CalidadAceiteVirgen` y `CalidadAceiteDeOrujo` evalúan la calidad del aceite en función de sus atributos.
-- `ProductoFinal` asigna su calidad utilizando una de estas estrategias.
+- Se implementan las estrategias `CalidadAceiteVirgenExtra`, `CalidadAceiteVirgen`, `CalidadAceiteDeOrujo` y `CalidadOlivaMesa` para evaluar la calidad segun criterios específicos.
+- `ProductoFinal` asigna su calidad utilizando una de estas estrategias, haciendo que el cálculo sea flexible y ampliable.
 
 ### 🚩 State + Template Method (Gestión de Estados)
 - `EstadoLote` es una clase abstracta que define un **método plantilla** `registrar_transicion()`, asegurando que todas las transiciones sean registradas de forma uniforme.
