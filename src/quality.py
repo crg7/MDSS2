@@ -49,3 +49,21 @@ class CalidadAceiteDeOrujo(CalidadStrategy):
             return "MEDIA"
         else:
             return "BAJA"
+
+class CalidadOlivaMesa(CalidadStrategy):
+    def evaluate(self, atributos: dict) -> str:
+        puntaje = 0
+        puntaje += 2 if atributos.get("uniformidad_color", 0) > 80 else 1 if atributos.get("uniformidad_color", 0) > 50 else 0
+        puntaje += 2 if atributos.get("tamano_promedio", 0) > 50 else 1 if atributos.get("tamano_promedio", 0) > 30 else 0
+        puntaje += 2 if atributos.get("desviacion", 0) < 5 else 1 if atributos.get("desviacion", 0) < 10 else 0
+        puntaje += 2 if atributos.get("perfil_sabor", "") in ["suave", "equilibrado"] else 0
+        puntaje += 1 if atributos.get("proceso_curado", "") in ["natural", "salmuerado"] else 0
+        puntaje += 2 if atributos.get("contenido_sal", 0) < 5 else 0
+        puntaje += 2 if atributos.get("defectos", 0) == 0 else 1 if atributos.get("defectos", 0) <= 2 else 0
+        puntaje += 1 if atributos.get("ph", 7) >= 7 else 0
+        if puntaje > 8:
+            return "ALTA"
+        elif puntaje >= 5:
+            return "MEDIA"
+        else:
+            return "BAJA"
